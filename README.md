@@ -35,9 +35,23 @@ Following packages should be included in your environment:
   
 The easier way is to run the following command:  
 
-``` python 
-conda env create -f environment.yml
+```shell 
+conda create --name rngtr python=3.7.6 pytorch==1.13.0 torchvision==0.14.0 torchaudio==0.13.0 pytorch-cuda=11.7 -c pytorch -c nvidia
 conda activate rngtr
+conda install --file environment.yml
+```
+
+```shell
+
+micromamba create --name rngtr python=3.7.6 pytorch==1.13.0 torchvision==0.14.0 torchaudio==0.13.0 pytorch-cuda=11.7 -c pytorch -c nvidia
+micromamba install --file environment.yml
+
+
+pip install allennlp allennlp-models conllu
+
+pip install transformers~=2.4 allennlp allennlp-models conllu  
+
+micromamba install transformers~=2.4
 ```
 
 <a name="othertasks"/>  
